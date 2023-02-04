@@ -1,10 +1,11 @@
 FROM python:3.9
 
-RUN pip install pandas
+RUN apt-get install wget
+RUN pip install pandas sqlalchemy psycopg2 fastparquet
 
 WORKDIR /app
 
-COPY data_pipeline.py pipeline.py
+COPY ingest-data.py ingest-data.py
 
 # ENTRYPOINT ["bash"]
- ENTRYPOINT ["python","pipeline.py"]
+ ENTRYPOINT ["python","ingest-data.py"]
