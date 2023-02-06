@@ -3,12 +3,12 @@ locals {
 }
 
 variable "project" {
-  description = "de-bootcamp-376905"
+  description = "dtc-de-zoomcamp-376908"
 }
 
 variable "region" {
   description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "asia-south1"
+  default = "europe-west6"
   type = string
 }
 
